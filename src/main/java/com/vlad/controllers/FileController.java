@@ -1,18 +1,9 @@
 package com.vlad.controllers;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
-
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ByteArrayResource;
-import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -29,13 +20,13 @@ import com.vlad.services.UserService;
 
 @RestController
 public class FileController {
-
+	
 	@Autowired
 	private UserService userService;
 
 	@RequestMapping(value = "{fileName}/users", method = RequestMethod.POST)
 	public void add(@PathVariable String fileName, @RequestBody User user) {
-		userService.save(user, fileName);
+		userService.save(Arrays.asList(user), fileName);
 	}
 
 	@RequestMapping(value = "{fileName}/users", method = RequestMethod.GET)

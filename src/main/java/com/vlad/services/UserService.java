@@ -10,6 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -20,10 +21,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import com.vlad.models.User;
 import com.google.gson.Gson;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 @Service
 public class UserService {
-
+	private static final Logger logger = LogManager.getLogger(UserService.class);
 	public static final String UPLOAD_DIRECTORY = "userFiles/";
 	private Gson gson = new Gson();
 
@@ -33,14 +35,18 @@ public class UserService {
 			dir.mkdir();
 	}
 
-	public void save(User user, String fileName) {
+	public void save(List<User> users, String fileName) {
+		String lines = users.stream()
+				  .map(user -> gson.toJson(user))
+				  .collect(Collectors.joining("\n"));
 		try {
 			Files.write(Paths.get(UPLOAD_DIRECTORY + fileName),
-					(gson.toJson(user) + "\n").getBytes(StandardCharsets.UTF_8),
+					lines.getBytes(StandardCharsets.UTF_8),
 					Files.exists(Paths.get(UPLOAD_DIRECTORY + fileName)) ? StandardOpenOption.APPEND
 							: StandardOpenOption.CREATE);
-		} catch (final IOException ioe) {
-			ioe.printStackTrace();
+		} catch (IOException e) {
+			logger.error("Unable to save user(s) to file: " + fileName + ": " + e.toString());
+			throw new RuntimeException();
 		}
 	}
 
@@ -49,7 +55,8 @@ public class UserService {
 		try (Stream<String> stream = Files.lines(Paths.get(UPLOAD_DIRECTORY + fileName))) {
 			users = stream.map(line -> gson.fromJson(line, User.class)).collect(Collectors.toList());
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error("Unable get all users from " + fileName +": " + e.toString());
+			throw new RuntimeException();
 		}
 		return users;
 	}
@@ -60,7 +67,8 @@ public class UserService {
 			usr = stream.map(line -> gson.fromJson(line, User.class)).filter(user -> user.getId() == id).findAny()
 					.get();
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error("Unable to get user by id: " + id + " from file " + fileName +": " + e.toString());
+			throw new RuntimeException();
 		}
 		return usr;
 	}
@@ -70,9 +78,10 @@ public class UserService {
 			List<User> users = stream.map(line -> gson.fromJson(line, User.class)).filter(user -> user.getId() != id)
 					.collect(Collectors.toList());
 			deleteAll(fileName);
-			users.forEach(user -> save(user, fileName));
+			save(users, fileName);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error("Unable to delete user with id: " + id + " from file " + fileName + ": " + e.toString());
+			throw new RuntimeException();
 		}
 	}
 
@@ -89,9 +98,10 @@ public class UserService {
 				users.add(user);
 			});
 			deleteAll(fileName);
-			users.forEach(user -> save(user, fileName));
+			save(users, fileName);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error("Unable to update user with id " + updatedUser.getId() + " in file " + fileName + ": " + e.toString());
+			throw new RuntimeException();
 		}
 	}
 
@@ -100,7 +110,8 @@ public class UserService {
 			File file = new File(UPLOAD_DIRECTORY + fileName);
 			file.delete();
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error("Unable to delete file " + fileName + ": " + e.toString());
+			throw new RuntimeException();
 		}
 	}
 
@@ -111,20 +122,21 @@ public class UserService {
 		try {
 			resource = new ByteArrayResource(Files.readAllBytes(path));
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error("Unable to download file " + fileName + ": " + e.toString());
+			throw new RuntimeException();
 		}
 		return resource;
 	}
-	
-	public void loadFile(String name, MultipartFile file) {
-		try {
+
+	public void loadFile(String fileName, MultipartFile file) {
+		try (BufferedOutputStream stream = new BufferedOutputStream(
+				new FileOutputStream(new File(UPLOAD_DIRECTORY + fileName)));) {
 			byte[] bytes = file.getBytes();
-			BufferedOutputStream stream = new BufferedOutputStream(
-					new FileOutputStream(new File(UPLOAD_DIRECTORY + name)));
 			stream.write(bytes);
-			stream.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error("Unable to load file " + fileName + ": " + e.toString());
+			throw new RuntimeException();
 		}
+
 	}
 }
