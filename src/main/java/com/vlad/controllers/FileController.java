@@ -45,7 +45,7 @@ public class FileController {
 
 	@RequestMapping(value = "{fileName}/users/{id}", method = RequestMethod.GET)
 	public User getById(@PathVariable String fileName, @PathVariable int id) {
-		return userService.get(id, fileName);
+		return userService.getById(id, fileName);
 	}
 
 	@RequestMapping(value = "{fileName}/users/{id}", method = RequestMethod.DELETE)

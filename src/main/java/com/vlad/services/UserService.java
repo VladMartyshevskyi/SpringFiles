@@ -33,18 +33,6 @@ public class UserService {
 			dir.mkdir();
 	}
 
-	public void loadFile(String name, MultipartFile file) {
-		try {
-			byte[] bytes = file.getBytes();
-			BufferedOutputStream stream = new BufferedOutputStream(
-					new FileOutputStream(new File(UPLOAD_DIRECTORY + name)));
-			stream.write(bytes);
-			stream.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 	public void save(User user, String fileName) {
 		try {
 			Files.write(Paths.get(UPLOAD_DIRECTORY + fileName),
@@ -66,7 +54,7 @@ public class UserService {
 		return users;
 	}
 
-	public User get(int id, String fileName) {
+	public User getById(int id, String fileName) {
 		User usr = null;
 		try (Stream<String> stream = Files.lines(Paths.get(UPLOAD_DIRECTORY + fileName))) {
 			usr = stream.map(line -> gson.fromJson(line, User.class)).filter(user -> user.getId() == id).findAny()
@@ -126,5 +114,17 @@ public class UserService {
 			e.printStackTrace();
 		}
 		return resource;
+	}
+	
+	public void loadFile(String name, MultipartFile file) {
+		try {
+			byte[] bytes = file.getBytes();
+			BufferedOutputStream stream = new BufferedOutputStream(
+					new FileOutputStream(new File(UPLOAD_DIRECTORY + name)));
+			stream.write(bytes);
+			stream.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
