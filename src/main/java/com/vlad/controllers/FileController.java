@@ -8,6 +8,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.InputStreamResource;
@@ -56,10 +58,9 @@ public class FileController {
 		userService.update(user, fileName);
 	}
 
-	@RequestMapping(path = "{fileName}/download", method = RequestMethod.GET)
+	@RequestMapping(path = "download/{fileName}", method = RequestMethod.GET)
 	public ResponseEntity<Resource> download(@PathVariable String fileName) throws IOException {
-		return ResponseEntity.ok()
-				.contentType(MediaType.parseMediaType("application/octet-stream"))
+		return ResponseEntity.ok().contentType(MediaType.parseMediaType("application/octet-stream"))
 				.body(userService.downloadFile(fileName));
 	}
 
