@@ -3,6 +3,8 @@ package com.vlad.controllers;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
@@ -35,7 +37,7 @@ public class FileController {
 	}
 
 	@RequestMapping(value = "{fileName}/users/{id}", method = RequestMethod.GET)
-	public User getById(@PathVariable String fileName, @PathVariable int id) {
+	public Optional<User> getById(@PathVariable String fileName, @PathVariable int id) {
 		return userService.getById(id, fileName);
 	}
 
@@ -59,5 +61,6 @@ public class FileController {
 	public void handleFileUpload(@RequestParam("name") String name, @RequestParam("file") MultipartFile file) {
 		userService.loadFile(name, file);
 	}
+	
 
 }
