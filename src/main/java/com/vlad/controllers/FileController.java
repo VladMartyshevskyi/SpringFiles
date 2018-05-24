@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.vlad.models.Filter;
 import com.vlad.models.User;
 import com.vlad.services.UserService;
 
@@ -30,6 +31,11 @@ public class FileController {
 	public void add(@PathVariable String fileName, @RequestBody User user) {
 		userService.save(Arrays.asList(user), fileName);
 	}
+	
+	@RequestMapping(value = "{fileName}/filter", method = RequestMethod.POST)
+	public void filter(@PathVariable String fileName, @RequestBody Filter[] filters) {
+		userService.filterAndSaveToDb(fileName, filters);
+	}
 
 	@RequestMapping(value = "{fileName}/users", method = RequestMethod.GET)
 	public List<User> all(@PathVariable String fileName) {
@@ -37,15 +43,19 @@ public class FileController {
 	}
 
 	@RequestMapping(value = "{fileName}/users/{id}", method = RequestMethod.GET)
-	public Optional<User> getById(@PathVariable String fileName, @PathVariable int id) {
+	public Optional<User> getById(@PathVariable String fileName, @PathVariable String id) {
 		return userService.getById(id, fileName);
+	}
+	
+	@RequestMapping(value = "{fileName}/generate/{count}", method = RequestMethod.GET)
+	public void generateUsers(@PathVariable String fileName, @PathVariable long count) {
+		userService.generateUsers(fileName, count);
 	}
 
 	@RequestMapping(value = "{fileName}/users/{id}", method = RequestMethod.DELETE)
-	public void delete(@PathVariable String fileName, @PathVariable int id) {
+	public void delete(@PathVariable String fileName, @PathVariable String id) {
 		userService.delete(id, fileName);
 	}
-
 	@RequestMapping(value = "{fileName}/users", method = RequestMethod.PUT)
 	public void update(@PathVariable String fileName, @RequestBody User user) {
 		userService.update(user, fileName);
@@ -61,6 +71,7 @@ public class FileController {
 	public void handleFileUpload(@RequestParam("name") String name, @RequestParam("file") MultipartFile file) {
 		userService.loadFile(name, file);
 	}
+	
 	
 
 }

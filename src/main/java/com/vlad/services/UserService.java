@@ -11,18 +11,24 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import com.google.gson.Gson;
+import com.vlad.dao.UserDao;
+import com.vlad.models.Filter;
 import com.vlad.models.User;
+import com.vlad.utils.UserGenerator;
 
 @Service
 public class UserService {
@@ -30,6 +36,9 @@ public class UserService {
 	public static final String UPLOAD_DIRECTORY = "userFiles/";
 	private Gson gson = new Gson();
 
+	@Autowired
+	private UserDao userDao;
+	
 	public UserService() {
 		// Create directory if not exist
 		File file = new File(UPLOAD_DIRECTORY);
@@ -55,23 +64,19 @@ public class UserService {
 	}
 
 	public List<User> getAll(String fileName) {
-		List<User> users = new ArrayList<>();
-		
 		try (Stream<String> stream = Files.lines(Paths.get(UPLOAD_DIRECTORY + fileName))) {
-			users = stream.map(line -> gson.fromJson(line, User.class)).collect(Collectors.toList());
+			return stream.map(line -> gson.fromJson(line, User.class)).collect(Collectors.toList());
 		} catch (IOException e) {
 			logger.error("Unable get all users from " + fileName + ": " + e.toString());
 			throw new RuntimeException();
 		}
-		
-		return users;
 	}
 
-	public Optional<User> getById(int id, String fileName) {
+	public Optional<User> getById(String id, String fileName) {
 
 		try (Stream<String> stream = Files.lines(Paths.get(UPLOAD_DIRECTORY + fileName))) {
 
-			return stream.map(line -> gson.fromJson(line, User.class)).filter(u -> u.getId() == id).findAny();
+			return stream.map(line -> gson.fromJson(line, User.class)).filter(u -> u.getId().equals(id)).findAny();
 
 		} catch (IOException e) {
 			logger.error("Unable to get user by id: " + id + " from file " + fileName + ": " + e.toString());
@@ -79,11 +84,11 @@ public class UserService {
 		}
 	}
 
-	public void delete(int id, String fileName) {
+	public void delete(String id, String fileName) {
 
 		try (Stream<String> stream = Files.lines(Paths.get(UPLOAD_DIRECTORY + fileName))) {
 
-			List<User> users = stream.map(line -> gson.fromJson(line, User.class)).filter(user -> user.getId() != id)
+			List<User> users = stream.map(line -> gson.fromJson(line, User.class)).filter(user -> !user.getId().equals(id))
 					.collect(Collectors.toList());
 
 			deleteFile(fileName);
@@ -101,7 +106,7 @@ public class UserService {
 
 			List<User> users = new ArrayList<>();
 			stream.map(line -> gson.fromJson(line, User.class)).forEach(user -> {
-				if (user.getId() == updatedUser.getId()) {
+				if (user.getId().equals(updatedUser.getId())) {
 					users.add(updatedUser);
 				} else {
 					users.add(user);
@@ -115,6 +120,10 @@ public class UserService {
 					+ e.toString());
 			throw new RuntimeException();
 		}
+	}
+	
+	public void generateUsers(String fileName, long count) {
+		save(UserGenerator.generateUsers(count), fileName);
 	}
 
 	public Resource downloadFile(String fileName) {
@@ -152,5 +161,23 @@ public class UserService {
 			logger.error("Unable to delete file " + fileName + ": " + e.toString());
 			throw new RuntimeException();
 		}
+	}
+
+	public List<User> filter(String fileName, Filter[] filters) {
+		List<User> result = getAll(fileName).stream().filter(user -> {
+			for(Filter filter : filters) {
+				if(!filter.isMatch(user)) {
+					return false;
+				}
+			}
+			return true;
+		}).collect(Collectors.toList());
+
+		return result;
+	}
+	
+	public void filterAndSaveToDb(String fileName, Filter[] filters) {
+		List<User> users = filter(fileName, filters);
+		userDao.addUsers(users);
 	}
 }
