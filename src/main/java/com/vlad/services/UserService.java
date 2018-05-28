@@ -27,6 +27,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.google.gson.Gson;
 import com.vlad.dao.UserDao;
 import com.vlad.models.Filter;
+import com.vlad.models.Matcher;
 import com.vlad.models.User;
 import com.vlad.utils.UserGenerator;
 
@@ -123,7 +124,7 @@ public class UserService {
 	}
 	
 	public void generateUsers(String fileName, long count) {
-		save(UserGenerator.generateUsers(count), fileName);
+		save(UserGenerator.getInstance().generateUsers(count), fileName);
 	}
 
 	public Resource downloadFile(String fileName) {
@@ -166,7 +167,8 @@ public class UserService {
 	public List<User> filter(String fileName, Filter[] filters) {
 		List<User> result = getAll(fileName).stream().filter(user -> {
 			for(Filter filter : filters) {
-				if(!filter.isMatch(user)) {
+				Matcher matcher = new Matcher(filter);
+				if(matcher.isNotMatch(user)) {
 					return false;
 				}
 			}

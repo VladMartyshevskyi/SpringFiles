@@ -1988,3 +1988,1098 @@ java.lang.RuntimeException: null
 2018-05-24 11:44:59.868  INFO 6903 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a2f6f80: startup date [Thu May 24 11:44:14 EEST 2018]; root of context hierarchy
 2018-05-24 11:44:59.871  INFO 6903 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
 2018-05-24 11:44:59.871  INFO 6903 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-25 15:57:59.610  INFO 5274 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 5274 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-25 15:57:59.651  INFO 5274 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-25 15:57:59.819  INFO 5274 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75db5df9: startup date [Fri May 25 15:57:59 EEST 2018]; root of context hierarchy
+2018-05-25 15:58:01.141  INFO 5274 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-05-25 15:58:01.218  INFO 5274 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-05-25 15:58:01.219  INFO 5274 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-25 15:58:01.227  INFO 5274 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-25 15:58:01.314  INFO 5274 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-05-25 15:58:01.314  INFO 5274 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1499 ms
+2018-05-25 15:58:01.454  INFO 5274 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-05-25 15:58:01.459  INFO 5274 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 15:58:01.459  INFO 5274 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 15:58:01.460  INFO 5274 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 15:58:01.460  INFO 5274 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 15:58:01.806  INFO 5274 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 15:58:02.103  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75db5df9: startup date [Fri May 25 15:57:59 EEST 2018]; root of context hierarchy
+2018-05-25 15:58:02.195  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.vlad.controllers.FileController.download(java.lang.String) throws java.io.IOException
+2018-05-25 15:58:02.200  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public void com.vlad.controllers.FileController.handleFileUpload(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2018-05-25 15:58:02.200  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[GET]}" onto public java.util.Optional<com.vlad.models.User> com.vlad.controllers.FileController.getById(java.lang.String,java.lang.String)
+2018-05-25 15:58:02.200  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/generate/{count}],methods=[GET]}" onto public void com.vlad.controllers.FileController.generateUsers(java.lang.String,long)
+2018-05-25 15:58:02.201  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[POST]}" onto public void com.vlad.controllers.FileController.add(java.lang.String,com.vlad.models.User)
+2018-05-25 15:58:02.201  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[PUT]}" onto public void com.vlad.controllers.FileController.update(java.lang.String,com.vlad.models.User)
+2018-05-25 15:58:02.202  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[DELETE]}" onto public void com.vlad.controllers.FileController.delete(java.lang.String,java.lang.String)
+2018-05-25 15:58:02.202  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/filter],methods=[POST]}" onto public void com.vlad.controllers.FileController.filter(java.lang.String,com.vlad.models.Filter[])
+2018-05-25 15:58:02.202  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[GET]}" onto public java.util.List<com.vlad.models.User> com.vlad.controllers.FileController.all(java.lang.String)
+2018-05-25 15:58:02.208  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 15:58:02.211  INFO 5274 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 15:58:02.245  INFO 5274 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 15:58:02.245  INFO 5274 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 15:58:02.617  INFO 5274 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-25 15:58:02.619  INFO 5274 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-25 15:58:02.628  INFO 5274 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-25 15:58:02.682  INFO 5274 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-25 15:58:02.686  INFO 5274 --- [main] c.v.SpringFilesApplication               : Started SpringFilesApplication in 3.925 seconds (JVM running for 5.05)
+2018-05-25 15:59:14.514  INFO 5274 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 15:59:14.514  INFO 5274 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 15:59:14.527  INFO 5274 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-05-25 16:03:31.611 ERROR 5274 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 55 path $] with root cause
+
+com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 55 path $
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1559) ~[gson-2.7.jar:?]
+	at com.google.gson.stream.JsonReader.checkLenient(JsonReader.java:1401) ~[gson-2.7.jar:?]
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:542) ~[gson-2.7.jar:?]
+	at com.google.gson.stream.JsonReader.peek(JsonReader.java:425) ~[gson-2.7.jar:?]
+	at com.google.gson.Gson.assertFullConsumption(Gson.java:859) ~[gson-2.7.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:853) ~[gson-2.7.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:801) ~[gson-2.7.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:773) ~[gson-2.7.jar:?]
+	at com.vlad.services.UserService.lambda$1(UserService.java:68) ~[main/:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[?:1.8.0_161]
+	at java.util.Iterator.forEachRemaining(Iterator.java:116) ~[?:1.8.0_161]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[?:1.8.0_161]
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_161]
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499) ~[?:1.8.0_161]
+	at com.vlad.services.UserService.getAll(UserService.java:68) ~[main/:?]
+	at com.vlad.services.UserService.filter(UserService.java:167) ~[main/:?]
+	at com.vlad.services.UserService.filterAndSaveToDb(UserService.java:180) ~[main/:?]
+	at com.vlad.controllers.FileController.filter(FileController.java:37) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_161]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+
+2018-05-25 16:04:30.804 ERROR 5274 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 55 path $] with root cause
+
+com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 55 path $
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1559) ~[gson-2.7.jar:?]
+	at com.google.gson.stream.JsonReader.checkLenient(JsonReader.java:1401) ~[gson-2.7.jar:?]
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:542) ~[gson-2.7.jar:?]
+	at com.google.gson.stream.JsonReader.peek(JsonReader.java:425) ~[gson-2.7.jar:?]
+	at com.google.gson.Gson.assertFullConsumption(Gson.java:859) ~[gson-2.7.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:853) ~[gson-2.7.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:801) ~[gson-2.7.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:773) ~[gson-2.7.jar:?]
+	at com.vlad.services.UserService.lambda$1(UserService.java:68) ~[main/:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[?:1.8.0_161]
+	at java.util.Iterator.forEachRemaining(Iterator.java:116) ~[?:1.8.0_161]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[?:1.8.0_161]
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_161]
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499) ~[?:1.8.0_161]
+	at com.vlad.services.UserService.getAll(UserService.java:68) ~[main/:?]
+	at com.vlad.services.UserService.filter(UserService.java:167) ~[main/:?]
+	at com.vlad.services.UserService.filterAndSaveToDb(UserService.java:180) ~[main/:?]
+	at com.vlad.controllers.FileController.filter(FileController.java:37) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_161]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+
+2018-05-25 16:05:16.114  INFO 5274 --- [http-nio-8080-exec-7] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2018-05-25 16:05:16.389  INFO 5274 --- [http-nio-8080-exec-7] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2018-05-25 16:05:16.396  INFO 5274 --- [http-nio-8080-exec-7] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2018-05-25 16:11:03.561  INFO 5274 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-05-25 16:11:03.562  INFO 5274 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75db5df9: startup date [Fri May 25 15:57:59 EEST 2018]; root of context hierarchy
+2018-05-25 16:11:03.570  INFO 5274 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-25 16:11:03.572  INFO 5274 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-25 16:11:03.578  INFO 5274 --- [RMI TCP Connection(2)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2018-05-25 16:11:03.590  INFO 5274 --- [RMI TCP Connection(2)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2018-05-25 16:11:08.790  INFO 6098 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 6098 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-25 16:11:08.801  INFO 6098 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-25 16:11:09.006  INFO 6098 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7494f96a: startup date [Fri May 25 16:11:09 EEST 2018]; root of context hierarchy
+2018-05-28 20:31:11.319  INFO 9044 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 9044 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-28 20:31:11.347  INFO 9044 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-28 20:31:11.535  INFO 9044 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4009e306: startup date [Mon May 28 20:31:11 EEST 2018]; root of context hierarchy
+2018-05-28 20:31:13.704  INFO 9044 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-05-28 20:31:13.722  INFO 9044 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-05-28 20:31:13.723  INFO 9044 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-28 20:31:13.728  INFO 9044 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-28 20:31:13.784  INFO 9044 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-05-28 20:31:13.784  INFO 9044 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2251 ms
+2018-05-28 20:31:13.869  INFO 9044 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-05-28 20:31:13.872  INFO 9044 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-28 20:31:13.872  INFO 9044 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-28 20:31:13.873  INFO 9044 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-28 20:31:13.873  INFO 9044 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-28 20:31:14.273  INFO 9044 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:31:14.630  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4009e306: startup date [Mon May 28 20:31:11 EEST 2018]; root of context hierarchy
+2018-05-28 20:31:14.716  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/generate/{count}],methods=[GET]}" onto public void com.vlad.controllers.FileController.generateUsers(java.lang.String,long)
+2018-05-28 20:31:14.717  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.vlad.controllers.FileController.download(java.lang.String) throws java.io.IOException
+2018-05-28 20:31:14.718  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public void com.vlad.controllers.FileController.handleFileUpload(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2018-05-28 20:31:14.718  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[GET]}" onto public java.util.Optional<com.vlad.models.User> com.vlad.controllers.FileController.getById(java.lang.String,java.lang.String)
+2018-05-28 20:31:14.719  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[POST]}" onto public void com.vlad.controllers.FileController.add(java.lang.String,com.vlad.models.User)
+2018-05-28 20:31:14.719  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[PUT]}" onto public void com.vlad.controllers.FileController.update(java.lang.String,com.vlad.models.User)
+2018-05-28 20:31:14.719  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[DELETE]}" onto public void com.vlad.controllers.FileController.delete(java.lang.String,java.lang.String)
+2018-05-28 20:31:14.719  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/filter],methods=[POST]}" onto public void com.vlad.controllers.FileController.filter(java.lang.String,com.vlad.models.Filter[])
+2018-05-28 20:31:14.720  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[GET]}" onto public java.util.List<com.vlad.models.User> com.vlad.controllers.FileController.all(java.lang.String)
+2018-05-28 20:31:14.725  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-28 20:31:14.726  INFO 9044 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-28 20:31:14.781  INFO 9044 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:31:14.781  INFO 9044 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:31:15.169  INFO 9044 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-28 20:31:15.172  INFO 9044 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-28 20:31:15.177  INFO 9044 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-28 20:31:15.282  INFO 9044 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-28 20:31:15.287  INFO 9044 --- [main] c.v.SpringFilesApplication               : Started SpringFilesApplication in 5.381 seconds (JVM running for 6.652)
+2018-05-28 20:33:30.915  INFO 9044 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-28 20:33:30.915  INFO 9044 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-28 20:33:30.925  INFO 9044 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2018-05-28 20:35:15.336 ERROR 9044 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Double] with root cause
+
+java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Double
+	at com.vlad.models.NumberChecker.check(NumberChecker.java:7) ~[main/:?]
+	at com.vlad.models.Matcher.isMatch(Matcher.java:21) ~[main/:?]
+	at com.vlad.models.Matcher.isNotMatch(Matcher.java:28) ~[main/:?]
+	at com.vlad.services.UserService.lambda$8(UserService.java:171) ~[main/:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:174) ~[?:1.8.0_161]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[?:1.8.0_161]
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_161]
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499) ~[?:1.8.0_161]
+	at com.vlad.services.UserService.filter(UserService.java:176) ~[main/:?]
+	at com.vlad.services.UserService.filterAndSaveToDb(UserService.java:182) ~[main/:?]
+	at com.vlad.controllers.FileController.filter(FileController.java:37) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_161]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+
+2018-05-28 20:37:03.639  INFO 9044 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-05-28 20:37:03.640  INFO 9044 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4009e306: startup date [Mon May 28 20:31:11 EEST 2018]; root of context hierarchy
+2018-05-28 20:37:03.644  INFO 9044 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-28 20:37:03.645  INFO 9044 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-28 20:37:06.122  INFO 9521 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 9521 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-28 20:37:06.127  INFO 9521 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-28 20:37:06.219  INFO 9521 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d8704ef: startup date [Mon May 28 20:37:06 EEST 2018]; root of context hierarchy
+2018-05-28 20:37:07.057  INFO 9521 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-05-28 20:37:07.074  INFO 9521 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-05-28 20:37:07.074  INFO 9521 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-28 20:37:07.078  INFO 9521 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-28 20:37:07.163  INFO 9521 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-05-28 20:37:07.164  INFO 9521 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 947 ms
+2018-05-28 20:37:07.292  INFO 9521 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-05-28 20:37:07.298  INFO 9521 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-28 20:37:07.299  INFO 9521 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-28 20:37:07.300  INFO 9521 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-28 20:37:07.301  INFO 9521 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-28 20:37:07.616  INFO 9521 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:37:07.925  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d8704ef: startup date [Mon May 28 20:37:06 EEST 2018]; root of context hierarchy
+2018-05-28 20:37:07.999  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.vlad.controllers.FileController.download(java.lang.String) throws java.io.IOException
+2018-05-28 20:37:08.000  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public void com.vlad.controllers.FileController.handleFileUpload(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2018-05-28 20:37:08.001  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[GET]}" onto public java.util.Optional<com.vlad.models.User> com.vlad.controllers.FileController.getById(java.lang.String,java.lang.String)
+2018-05-28 20:37:08.001  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/generate/{count}],methods=[GET]}" onto public void com.vlad.controllers.FileController.generateUsers(java.lang.String,long)
+2018-05-28 20:37:08.002  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[POST]}" onto public void com.vlad.controllers.FileController.add(java.lang.String,com.vlad.models.User)
+2018-05-28 20:37:08.002  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[PUT]}" onto public void com.vlad.controllers.FileController.update(java.lang.String,com.vlad.models.User)
+2018-05-28 20:37:08.002  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[DELETE]}" onto public void com.vlad.controllers.FileController.delete(java.lang.String,java.lang.String)
+2018-05-28 20:37:08.002  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/filter],methods=[POST]}" onto public void com.vlad.controllers.FileController.filter(java.lang.String,com.vlad.models.Filter[])
+2018-05-28 20:37:08.003  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[GET]}" onto public java.util.List<com.vlad.models.User> com.vlad.controllers.FileController.all(java.lang.String)
+2018-05-28 20:37:08.006  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-28 20:37:08.007  INFO 9521 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-28 20:37:08.039  INFO 9521 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:37:08.039  INFO 9521 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:37:08.409  INFO 9521 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-28 20:37:08.411  INFO 9521 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-28 20:37:08.416  INFO 9521 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-28 20:37:08.448  INFO 9521 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-28 20:37:08.451  INFO 9521 --- [main] c.v.SpringFilesApplication               : Started SpringFilesApplication in 2.823 seconds (JVM running for 3.804)
+2018-05-28 20:37:17.613  INFO 9521 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-28 20:37:17.614  INFO 9521 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-28 20:37:17.624  INFO 9521 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2018-05-28 20:37:17.784 ERROR 9521 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Double] with root cause
+
+java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Double
+	at com.vlad.models.NumberChecker.check(NumberChecker.java:7) ~[main/:?]
+	at com.vlad.models.Matcher.isMatch(Matcher.java:21) ~[main/:?]
+	at com.vlad.models.Matcher.isNotMatch(Matcher.java:28) ~[main/:?]
+	at com.vlad.services.UserService.lambda$8(UserService.java:171) ~[main/:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:174) ~[?:1.8.0_161]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[?:1.8.0_161]
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_161]
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499) ~[?:1.8.0_161]
+	at com.vlad.services.UserService.filter(UserService.java:176) ~[main/:?]
+	at com.vlad.services.UserService.filterAndSaveToDb(UserService.java:182) ~[main/:?]
+	at com.vlad.controllers.FileController.filter(FileController.java:37) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_161]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+
+2018-05-28 20:40:11.898  INFO 9521 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-05-28 20:40:11.900  INFO 9521 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d8704ef: startup date [Mon May 28 20:37:06 EEST 2018]; root of context hierarchy
+2018-05-28 20:40:11.907  INFO 9521 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-28 20:40:11.907  INFO 9521 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-28 20:40:13.999  INFO 9855 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 9855 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-28 20:40:14.005  INFO 9855 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-28 20:40:14.089  INFO 9855 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@305b7c14: startup date [Mon May 28 20:40:14 EEST 2018]; root of context hierarchy
+2018-05-28 20:40:15.582  INFO 9855 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-05-28 20:40:15.598  INFO 9855 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-05-28 20:40:15.599  INFO 9855 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-28 20:40:15.603  INFO 9855 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-28 20:40:15.670  INFO 9855 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-05-28 20:40:15.670  INFO 9855 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1584 ms
+2018-05-28 20:40:15.761  INFO 9855 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-05-28 20:40:15.764  INFO 9855 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-28 20:40:15.764  INFO 9855 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-28 20:40:15.765  INFO 9855 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-28 20:40:15.765  INFO 9855 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-28 20:40:15.940  INFO 9855 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:40:16.102  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@305b7c14: startup date [Mon May 28 20:40:14 EEST 2018]; root of context hierarchy
+2018-05-28 20:40:16.166  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[GET]}" onto public java.util.Optional<com.vlad.models.User> com.vlad.controllers.FileController.getById(java.lang.String,java.lang.String)
+2018-05-28 20:40:16.170  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/generate/{count}],methods=[GET]}" onto public void com.vlad.controllers.FileController.generateUsers(java.lang.String,long)
+2018-05-28 20:40:16.172  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.vlad.controllers.FileController.download(java.lang.String) throws java.io.IOException
+2018-05-28 20:40:16.172  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public void com.vlad.controllers.FileController.handleFileUpload(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2018-05-28 20:40:16.173  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[POST]}" onto public void com.vlad.controllers.FileController.add(java.lang.String,com.vlad.models.User)
+2018-05-28 20:40:16.173  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[PUT]}" onto public void com.vlad.controllers.FileController.update(java.lang.String,com.vlad.models.User)
+2018-05-28 20:40:16.173  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[DELETE]}" onto public void com.vlad.controllers.FileController.delete(java.lang.String,java.lang.String)
+2018-05-28 20:40:16.174  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/filter],methods=[POST]}" onto public void com.vlad.controllers.FileController.filter(java.lang.String,com.vlad.models.Filter[])
+2018-05-28 20:40:16.174  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[GET]}" onto public java.util.List<com.vlad.models.User> com.vlad.controllers.FileController.all(java.lang.String)
+2018-05-28 20:40:16.178  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-28 20:40:16.179  INFO 9855 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-28 20:40:16.216  INFO 9855 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:40:16.216  INFO 9855 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:40:16.579  INFO 9855 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-28 20:40:16.582  INFO 9855 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-28 20:40:16.591  INFO 9855 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-28 20:40:16.635  INFO 9855 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-28 20:40:16.642  INFO 9855 --- [main] c.v.SpringFilesApplication               : Started SpringFilesApplication in 2.947 seconds (JVM running for 3.588)
+2018-05-28 20:40:26.359  INFO 9855 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-28 20:40:26.359  INFO 9855 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-28 20:40:26.369  INFO 9855 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2018-05-28 20:40:26.501 ERROR 9855 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Double] with root cause
+
+java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Double
+	at com.vlad.models.NumberChecker.check(NumberChecker.java:8) ~[main/:?]
+	at com.vlad.models.Matcher.isMatch(Matcher.java:21) ~[main/:?]
+	at com.vlad.models.Matcher.isNotMatch(Matcher.java:28) ~[main/:?]
+	at com.vlad.services.UserService.lambda$8(UserService.java:171) ~[main/:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:174) ~[?:1.8.0_161]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[?:1.8.0_161]
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_161]
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499) ~[?:1.8.0_161]
+	at com.vlad.services.UserService.filter(UserService.java:176) ~[main/:?]
+	at com.vlad.services.UserService.filterAndSaveToDb(UserService.java:182) ~[main/:?]
+	at com.vlad.controllers.FileController.filter(FileController.java:37) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_161]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+
+2018-05-28 20:41:29.738  INFO 9855 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-05-28 20:41:29.739  INFO 9855 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@305b7c14: startup date [Mon May 28 20:40:14 EEST 2018]; root of context hierarchy
+2018-05-28 20:41:29.742  INFO 9855 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-28 20:41:29.743  INFO 9855 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-28 20:41:32.145  INFO 10008 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 10008 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-28 20:41:32.149  INFO 10008 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-28 20:41:32.231  INFO 10008 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e9ddb4: startup date [Mon May 28 20:41:32 EEST 2018]; root of context hierarchy
+2018-05-28 20:41:33.207  INFO 10008 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-05-28 20:41:33.235  INFO 10008 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-05-28 20:41:33.236  INFO 10008 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-28 20:41:33.241  INFO 10008 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-28 20:41:33.346  INFO 10008 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-05-28 20:41:33.347  INFO 10008 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1118 ms
+2018-05-28 20:41:33.516  INFO 10008 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-05-28 20:41:33.521  INFO 10008 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-28 20:41:33.522  INFO 10008 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-28 20:41:33.523  INFO 10008 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-28 20:41:33.523  INFO 10008 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-28 20:41:33.891  INFO 10008 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:41:34.235  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e9ddb4: startup date [Mon May 28 20:41:32 EEST 2018]; root of context hierarchy
+2018-05-28 20:41:34.318  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[GET]}" onto public java.util.Optional<com.vlad.models.User> com.vlad.controllers.FileController.getById(java.lang.String,java.lang.String)
+2018-05-28 20:41:34.319  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/generate/{count}],methods=[GET]}" onto public void com.vlad.controllers.FileController.generateUsers(java.lang.String,long)
+2018-05-28 20:41:34.320  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.vlad.controllers.FileController.download(java.lang.String) throws java.io.IOException
+2018-05-28 20:41:34.320  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public void com.vlad.controllers.FileController.handleFileUpload(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2018-05-28 20:41:34.321  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[POST]}" onto public void com.vlad.controllers.FileController.add(java.lang.String,com.vlad.models.User)
+2018-05-28 20:41:34.321  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[PUT]}" onto public void com.vlad.controllers.FileController.update(java.lang.String,com.vlad.models.User)
+2018-05-28 20:41:34.322  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[DELETE]}" onto public void com.vlad.controllers.FileController.delete(java.lang.String,java.lang.String)
+2018-05-28 20:41:34.322  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/filter],methods=[POST]}" onto public void com.vlad.controllers.FileController.filter(java.lang.String,com.vlad.models.Filter[])
+2018-05-28 20:41:34.323  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[GET]}" onto public java.util.List<com.vlad.models.User> com.vlad.controllers.FileController.all(java.lang.String)
+2018-05-28 20:41:34.329  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-28 20:41:34.333  INFO 10008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-28 20:41:34.375  INFO 10008 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:41:34.375  INFO 10008 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:41:34.748  INFO 10008 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-28 20:41:34.750  INFO 10008 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-28 20:41:34.754  INFO 10008 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-28 20:41:34.776  INFO 10008 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-28 20:41:34.779  INFO 10008 --- [main] c.v.SpringFilesApplication               : Started SpringFilesApplication in 3.124 seconds (JVM running for 4.109)
+2018-05-28 20:41:38.177  INFO 10008 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-28 20:41:38.177  INFO 10008 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-28 20:41:38.187  INFO 10008 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2018-05-28 20:41:38.317 ERROR 10008 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Double] with root cause
+
+java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Double
+	at com.vlad.models.NumberChecker.check(NumberChecker.java:8) ~[main/:?]
+	at com.vlad.models.Matcher.isMatch(Matcher.java:21) ~[main/:?]
+	at com.vlad.models.Matcher.isNotMatch(Matcher.java:28) ~[main/:?]
+	at com.vlad.services.UserService.lambda$8(UserService.java:171) ~[main/:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:174) ~[?:1.8.0_161]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[?:1.8.0_161]
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_161]
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499) ~[?:1.8.0_161]
+	at com.vlad.services.UserService.filter(UserService.java:176) ~[main/:?]
+	at com.vlad.services.UserService.filterAndSaveToDb(UserService.java:182) ~[main/:?]
+	at com.vlad.controllers.FileController.filter(FileController.java:37) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_161]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+
+2018-05-28 20:44:17.816  INFO 10008 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-05-28 20:44:17.818  INFO 10008 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e9ddb4: startup date [Mon May 28 20:41:32 EEST 2018]; root of context hierarchy
+2018-05-28 20:44:17.822  INFO 10008 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-28 20:44:17.823  INFO 10008 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-28 20:44:20.330  INFO 10216 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 10216 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-28 20:44:20.339  INFO 10216 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-28 20:44:20.456  INFO 10216 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a2f6f80: startup date [Mon May 28 20:44:20 EEST 2018]; root of context hierarchy
+2018-05-28 20:44:21.414  INFO 10216 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-05-28 20:44:21.430  INFO 10216 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-05-28 20:44:21.431  INFO 10216 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-28 20:44:21.435  INFO 10216 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-28 20:44:21.487  INFO 10216 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-05-28 20:44:21.488  INFO 10216 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1036 ms
+2018-05-28 20:44:21.594  INFO 10216 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-05-28 20:44:21.597  INFO 10216 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-28 20:44:21.597  INFO 10216 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-28 20:44:21.597  INFO 10216 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-28 20:44:21.597  INFO 10216 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-28 20:44:21.880  INFO 10216 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:44:22.166  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a2f6f80: startup date [Mon May 28 20:44:20 EEST 2018]; root of context hierarchy
+2018-05-28 20:44:22.235  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[GET]}" onto public java.util.Optional<com.vlad.models.User> com.vlad.controllers.FileController.getById(java.lang.String,java.lang.String)
+2018-05-28 20:44:22.235  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/generate/{count}],methods=[GET]}" onto public void com.vlad.controllers.FileController.generateUsers(java.lang.String,long)
+2018-05-28 20:44:22.236  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.vlad.controllers.FileController.download(java.lang.String) throws java.io.IOException
+2018-05-28 20:44:22.236  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public void com.vlad.controllers.FileController.handleFileUpload(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2018-05-28 20:44:22.237  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[POST]}" onto public void com.vlad.controllers.FileController.add(java.lang.String,com.vlad.models.User)
+2018-05-28 20:44:22.237  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[PUT]}" onto public void com.vlad.controllers.FileController.update(java.lang.String,com.vlad.models.User)
+2018-05-28 20:44:22.237  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[DELETE]}" onto public void com.vlad.controllers.FileController.delete(java.lang.String,java.lang.String)
+2018-05-28 20:44:22.237  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/filter],methods=[POST]}" onto public void com.vlad.controllers.FileController.filter(java.lang.String,com.vlad.models.Filter[])
+2018-05-28 20:44:22.238  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[GET]}" onto public java.util.List<com.vlad.models.User> com.vlad.controllers.FileController.all(java.lang.String)
+2018-05-28 20:44:22.241  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-28 20:44:22.242  INFO 10216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-28 20:44:22.275  INFO 10216 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:44:22.275  INFO 10216 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:44:22.592  INFO 10216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-28 20:44:22.595  INFO 10216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-28 20:44:22.605  INFO 10216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-28 20:44:22.648  INFO 10216 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-28 20:44:22.656  INFO 10216 --- [main] c.v.SpringFilesApplication               : Started SpringFilesApplication in 2.822 seconds (JVM running for 3.818)
+2018-05-28 20:44:24.925  INFO 10216 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-28 20:44:24.925  INFO 10216 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-28 20:44:24.935  INFO 10216 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2018-05-28 20:44:25.075 ERROR 10216 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Double] with root cause
+
+java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Double
+	at com.vlad.models.NumberChecker.check(NumberChecker.java:8) ~[main/:?]
+	at com.vlad.models.Matcher.isMatch(Matcher.java:21) ~[main/:?]
+	at com.vlad.models.Matcher.isNotMatch(Matcher.java:28) ~[main/:?]
+	at com.vlad.services.UserService.lambda$8(UserService.java:171) ~[main/:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:174) ~[?:1.8.0_161]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[?:1.8.0_161]
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708) ~[?:1.8.0_161]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_161]
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499) ~[?:1.8.0_161]
+	at com.vlad.services.UserService.filter(UserService.java:176) ~[main/:?]
+	at com.vlad.services.UserService.filterAndSaveToDb(UserService.java:182) ~[main/:?]
+	at com.vlad.controllers.FileController.filter(FileController.java:37) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_161]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+
+2018-05-28 20:44:32.937  INFO 10216 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-05-28 20:44:32.937  INFO 10216 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a2f6f80: startup date [Mon May 28 20:44:20 EEST 2018]; root of context hierarchy
+2018-05-28 20:44:32.940  INFO 10216 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-28 20:44:32.941  INFO 10216 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-28 20:47:18.176  INFO 10518 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 10518 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-28 20:47:18.201  INFO 10518 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-28 20:47:18.738  INFO 10518 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@587e5365: startup date [Mon May 28 20:47:18 EEST 2018]; root of context hierarchy
+2018-05-28 20:47:22.425  INFO 10518 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-05-28 20:47:22.490  INFO 10518 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-05-28 20:47:22.492  INFO 10518 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-28 20:47:22.531  INFO 10518 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-28 20:47:22.902  INFO 10518 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-05-28 20:47:22.911  INFO 10518 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 4197 ms
+2018-05-28 20:47:23.545  INFO 10518 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-05-28 20:47:23.553  INFO 10518 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-28 20:47:23.556  INFO 10518 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-28 20:47:23.557  INFO 10518 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-28 20:47:23.558  INFO 10518 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-28 20:47:24.203  INFO 10518 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:47:24.825  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@587e5365: startup date [Mon May 28 20:47:18 EEST 2018]; root of context hierarchy
+2018-05-28 20:47:25.019  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[GET]}" onto public java.util.Optional<com.vlad.models.User> com.vlad.controllers.FileController.getById(java.lang.String,java.lang.String)
+2018-05-28 20:47:25.020  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/generate/{count}],methods=[GET]}" onto public void com.vlad.controllers.FileController.generateUsers(java.lang.String,long)
+2018-05-28 20:47:25.024  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.vlad.controllers.FileController.download(java.lang.String) throws java.io.IOException
+2018-05-28 20:47:25.027  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public void com.vlad.controllers.FileController.handleFileUpload(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2018-05-28 20:47:25.027  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[POST]}" onto public void com.vlad.controllers.FileController.add(java.lang.String,com.vlad.models.User)
+2018-05-28 20:47:25.028  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[PUT]}" onto public void com.vlad.controllers.FileController.update(java.lang.String,com.vlad.models.User)
+2018-05-28 20:47:25.028  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[DELETE]}" onto public void com.vlad.controllers.FileController.delete(java.lang.String,java.lang.String)
+2018-05-28 20:47:25.029  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/filter],methods=[POST]}" onto public void com.vlad.controllers.FileController.filter(java.lang.String,com.vlad.models.Filter[])
+2018-05-28 20:47:25.031  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[GET]}" onto public java.util.List<com.vlad.models.User> com.vlad.controllers.FileController.all(java.lang.String)
+2018-05-28 20:47:25.068  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-28 20:47:25.069  INFO 10518 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-28 20:47:25.222  INFO 10518 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:47:25.222  INFO 10518 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:47:26.635  INFO 10518 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-28 20:47:26.640  INFO 10518 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-28 20:47:26.669  INFO 10518 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-28 20:47:27.105  INFO 10518 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-28 20:47:27.127  INFO 10518 --- [main] c.v.SpringFilesApplication               : Started SpringFilesApplication in 10.742 seconds (JVM running for 14.134)
+2018-05-28 20:47:30.671  INFO 10518 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-28 20:47:30.682  INFO 10518 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-28 20:47:30.764  INFO 10518 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 80 ms
+2018-05-28 20:47:31.762  INFO 10518 --- [http-nio-8080-exec-1] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2018-05-28 20:47:33.534  INFO 10518 --- [http-nio-8080-exec-1] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2018-05-28 20:47:33.601  INFO 10518 --- [http-nio-8080-exec-1] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2018-05-28 20:51:29.175  INFO 10518 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-05-28 20:51:29.176  INFO 10518 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@587e5365: startup date [Mon May 28 20:47:18 EEST 2018]; root of context hierarchy
+2018-05-28 20:51:29.179  INFO 10518 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-28 20:51:29.180  INFO 10518 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-28 20:51:29.182  INFO 10518 --- [RMI TCP Connection(2)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2018-05-28 20:51:29.200  INFO 10518 --- [RMI TCP Connection(2)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2018-05-28 20:51:29.369  WARN 10518 --- [http-nio-8080-exec-3] c.z.h.p.ProxyConnection                  : HikariPool-1 - Connection com.mysql.jdbc.JDBC4Connection@1c516c7f marked as broken because of SQLSTATE(08003), ErrorCode(0)
+
+java.sql.BatchUpdateException: No operations allowed after statement closed.
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:2020) ~[mysql-connector-java-5.1.13.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1451) ~[mysql-connector-java-5.1.13.jar:?]
+	at com.zaxxer.hikari.pool.ProxyStatement.executeBatch(ProxyStatement.java:128) ~[HikariCP-2.7.9.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeBatch(HikariProxyPreparedStatement.java) ~[HikariCP-2.7.9.jar:?]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$batchUpdate$2(JdbcTemplate.java:938) ~[spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:605) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:634) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.batchUpdate(JdbcTemplate.java:924) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at com.vlad.dao.UserDao.addUsers(UserDao.java:24) [main/:?]
+	at com.vlad.services.UserService.filterAndSaveToDb(UserService.java:183) [main/:?]
+	at com.vlad.controllers.FileController.filter(FileController.java:37) [main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_161]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+
+2018-05-28 20:51:29.407  INFO 10518 --- [http-nio-8080-exec-3] o.s.b.f.x.XmlBeanDefinitionReader        : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2018-05-28 20:51:29.611  INFO 10518 --- [http-nio-8080-exec-3] o.s.j.s.SQLErrorCodesFactory             : SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+2018-05-28 20:51:29.629  WARN 10518 --- [http-nio-8080-exec-3] o.s.j.s.SQLErrorCodesFactory             : Error while extracting database name - falling back to empty error codes
+
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:327) ~[spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:355) ~[spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodesFactory.getErrorCodes(SQLErrorCodesFactory.java:214) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.setDataSource(SQLErrorCodeSQLExceptionTranslator.java:136) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.<init>(SQLErrorCodeSQLExceptionTranslator.java:99) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.support.JdbcAccessor.getExceptionTranslator(JdbcAccessor.java:122) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1402) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:620) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:634) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.batchUpdate(JdbcTemplate.java:924) [spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at com.vlad.dao.UserDao.addUsers(UserDao.java:24) [main/:?]
+	at com.vlad.services.UserService.filterAndSaveToDb(UserService.java:183) [main/:?]
+	at com.vlad.controllers.FileController.filter(FileController.java:37) [main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_161]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) [spring-webmvc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:318) ~[spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 66 more
+Caused by: java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:96) ~[HikariCP-2.7.9.jar:?]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151) ~[spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) ~[spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) ~[spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:318) ~[spring-jdbc-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	... 66 more
+
+2018-05-28 20:54:15.232  INFO 10885 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 10885 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-28 20:54:15.242  INFO 10885 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-28 20:54:15.389  INFO 10885 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e858e0a: startup date [Mon May 28 20:54:15 EEST 2018]; root of context hierarchy
+2018-05-28 20:54:16.694  INFO 10885 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-05-28 20:54:16.713  INFO 10885 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-05-28 20:54:16.714  INFO 10885 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-28 20:54:16.719  INFO 10885 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-28 20:54:16.778  INFO 10885 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-05-28 20:54:16.779  INFO 10885 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1399 ms
+2018-05-28 20:54:16.889  INFO 10885 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-05-28 20:54:16.892  INFO 10885 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-28 20:54:16.893  INFO 10885 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-28 20:54:16.893  INFO 10885 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-28 20:54:16.893  INFO 10885 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-28 20:54:17.151  INFO 10885 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:54:17.529  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e858e0a: startup date [Mon May 28 20:54:15 EEST 2018]; root of context hierarchy
+2018-05-28 20:54:17.629  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[GET]}" onto public java.util.Optional<com.vlad.models.User> com.vlad.controllers.FileController.getById(java.lang.String,java.lang.String)
+2018-05-28 20:54:17.630  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public void com.vlad.controllers.FileController.handleFileUpload(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2018-05-28 20:54:17.631  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.vlad.controllers.FileController.download(java.lang.String) throws java.io.IOException
+2018-05-28 20:54:17.632  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/generate/{count}],methods=[GET]}" onto public void com.vlad.controllers.FileController.generateUsers(java.lang.String,long)
+2018-05-28 20:54:17.633  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[POST]}" onto public void com.vlad.controllers.FileController.add(java.lang.String,com.vlad.models.User)
+2018-05-28 20:54:17.634  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[PUT]}" onto public void com.vlad.controllers.FileController.update(java.lang.String,com.vlad.models.User)
+2018-05-28 20:54:17.634  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[DELETE]}" onto public void com.vlad.controllers.FileController.delete(java.lang.String,java.lang.String)
+2018-05-28 20:54:17.635  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/filter],methods=[POST]}" onto public void com.vlad.controllers.FileController.filter(java.lang.String,com.vlad.models.Filter[])
+2018-05-28 20:54:17.635  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[GET]}" onto public java.util.List<com.vlad.models.User> com.vlad.controllers.FileController.all(java.lang.String)
+2018-05-28 20:54:17.644  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-28 20:54:17.644  INFO 10885 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-28 20:54:17.696  INFO 10885 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:54:17.696  INFO 10885 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:54:18.119  INFO 10885 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-28 20:54:18.121  INFO 10885 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-28 20:54:18.126  INFO 10885 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-28 20:54:18.263  INFO 10885 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-28 20:54:18.267  INFO 10885 --- [main] c.v.SpringFilesApplication               : Started SpringFilesApplication in 3.978 seconds (JVM running for 5.422)
+2018-05-28 20:54:22.704  INFO 10885 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-28 20:54:22.705  INFO 10885 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-28 20:54:22.725  INFO 10885 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-05-28 20:56:56.070  INFO 10885 --- [http-nio-8080-exec-2] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2018-05-28 20:56:56.383  INFO 10885 --- [http-nio-8080-exec-2] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2018-05-28 20:56:56.388  INFO 10885 --- [http-nio-8080-exec-2] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2018-05-28 20:58:53.109  INFO 11312 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 11312 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-28 20:58:53.127  INFO 11312 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-28 20:58:53.303  INFO 11312 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7dc0f706: startup date [Mon May 28 20:58:53 EEST 2018]; root of context hierarchy
+2018-05-28 20:58:55.227  INFO 11312 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-05-28 20:58:55.263  INFO 11312 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-05-28 20:58:55.265  INFO 11312 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-28 20:58:55.273  INFO 11312 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-28 20:58:55.354  INFO 11312 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-05-28 20:58:55.354  INFO 11312 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2061 ms
+2018-05-28 20:58:55.509  INFO 11312 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-05-28 20:58:55.518  INFO 11312 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-28 20:58:55.519  INFO 11312 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-28 20:58:55.520  INFO 11312 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-28 20:58:55.520  INFO 11312 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-28 20:58:55.768  INFO 11312 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:58:55.955  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7dc0f706: startup date [Mon May 28 20:58:53 EEST 2018]; root of context hierarchy
+2018-05-28 20:58:55.998  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[GET]}" onto public java.util.Optional<com.vlad.models.User> com.vlad.controllers.FileController.getById(java.lang.String,java.lang.String)
+2018-05-28 20:58:55.999  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/generate/{count}],methods=[GET]}" onto public void com.vlad.controllers.FileController.generateUsers(java.lang.String,long)
+2018-05-28 20:58:55.999  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.vlad.controllers.FileController.download(java.lang.String) throws java.io.IOException
+2018-05-28 20:58:56.000  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public void com.vlad.controllers.FileController.handleFileUpload(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2018-05-28 20:58:56.000  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[POST]}" onto public void com.vlad.controllers.FileController.add(java.lang.String,com.vlad.models.User)
+2018-05-28 20:58:56.000  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[PUT]}" onto public void com.vlad.controllers.FileController.update(java.lang.String,com.vlad.models.User)
+2018-05-28 20:58:56.000  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[DELETE]}" onto public void com.vlad.controllers.FileController.delete(java.lang.String,java.lang.String)
+2018-05-28 20:58:56.001  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/filter],methods=[POST]}" onto public void com.vlad.controllers.FileController.filter(java.lang.String,com.vlad.models.Filter[])
+2018-05-28 20:58:56.001  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[GET]}" onto public java.util.List<com.vlad.models.User> com.vlad.controllers.FileController.all(java.lang.String)
+2018-05-28 20:58:56.004  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-28 20:58:56.005  INFO 11312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-28 20:58:56.027  INFO 11312 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:58:56.027  INFO 11312 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 20:58:56.275  INFO 11312 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-28 20:58:56.277  INFO 11312 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-28 20:58:56.282  INFO 11312 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-28 20:58:56.304  INFO 11312 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-28 20:58:56.307  INFO 11312 --- [main] c.v.SpringFilesApplication               : Started SpringFilesApplication in 3.918 seconds (JVM running for 5.709)
+2018-05-28 20:59:05.009  INFO 11312 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-28 20:59:05.010  INFO 11312 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-28 20:59:05.040  INFO 11312 --- [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2018-05-28 20:59:05.243  INFO 11312 --- [http-nio-8080-exec-2] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2018-05-28 20:59:05.539  INFO 11312 --- [http-nio-8080-exec-2] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2018-05-28 20:59:05.548  INFO 11312 --- [http-nio-8080-exec-2] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2018-05-28 21:02:29.654  INFO 11312 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-05-28 21:02:29.655  INFO 11312 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7dc0f706: startup date [Mon May 28 20:58:53 EEST 2018]; root of context hierarchy
+2018-05-28 21:02:29.657  INFO 11312 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-28 21:02:29.658  INFO 11312 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-28 21:02:29.659  INFO 11312 --- [RMI TCP Connection(2)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2018-05-28 21:02:29.672  INFO 11312 --- [RMI TCP Connection(2)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2018-05-28 21:02:31.531  INFO 11491 --- [main] c.v.SpringFilesApplication               : Starting SpringFilesApplication on vlad-HP with PID 11491 (/home/vlad/devsmile/springFiles/bin/main started by vlad in /home/vlad/devsmile/springFiles)
+2018-05-28 21:02:31.534  INFO 11491 --- [main] c.v.SpringFilesApplication               : No active profile set, falling back to default profiles: default
+2018-05-28 21:02:31.621  INFO 11491 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@8c3b9d: startup date [Mon May 28 21:02:31 EEST 2018]; root of context hierarchy
+2018-05-28 21:02:32.465  INFO 11491 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2018-05-28 21:02:32.483  INFO 11491 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2018-05-28 21:02:32.483  INFO 11491 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-28 21:02:32.488  INFO 11491 --- [localhost-startStop-1] o.a.c.c.AprLifecycleListener             : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-28 21:02:32.543  INFO 11491 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2018-05-28 21:02:32.544  INFO 11491 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 926 ms
+2018-05-28 21:02:32.659  INFO 11491 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Servlet dispatcherServlet mapped to [/]
+2018-05-28 21:02:32.662  INFO 11491 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-28 21:02:32.662  INFO 11491 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-28 21:02:32.662  INFO 11491 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-28 21:02:32.663  INFO 11491 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-28 21:02:32.953  INFO 11491 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 21:02:33.281  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@8c3b9d: startup date [Mon May 28 21:02:31 EEST 2018]; root of context hierarchy
+2018-05-28 21:02:33.362  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[GET]}" onto public java.util.Optional<com.vlad.models.User> com.vlad.controllers.FileController.getById(java.lang.String,java.lang.String)
+2018-05-28 21:02:33.367  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/generate/{count}],methods=[GET]}" onto public void com.vlad.controllers.FileController.generateUsers(java.lang.String,long)
+2018-05-28 21:02:33.368  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/download/{fileName}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.vlad.controllers.FileController.download(java.lang.String) throws java.io.IOException
+2018-05-28 21:02:33.369  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public void com.vlad.controllers.FileController.handleFileUpload(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2018-05-28 21:02:33.370  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[POST]}" onto public void com.vlad.controllers.FileController.add(java.lang.String,com.vlad.models.User)
+2018-05-28 21:02:33.370  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[PUT]}" onto public void com.vlad.controllers.FileController.update(java.lang.String,com.vlad.models.User)
+2018-05-28 21:02:33.371  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users/{id}],methods=[DELETE]}" onto public void com.vlad.controllers.FileController.delete(java.lang.String,java.lang.String)
+2018-05-28 21:02:33.371  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/filter],methods=[POST]}" onto public void com.vlad.controllers.FileController.filter(java.lang.String,com.vlad.models.Filter[])
+2018-05-28 21:02:33.372  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{fileName}/users],methods=[GET]}" onto public java.util.List<com.vlad.models.User> com.vlad.controllers.FileController.all(java.lang.String)
+2018-05-28 21:02:33.378  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-28 21:02:33.378  INFO 11491 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-28 21:02:33.425  INFO 11491 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 21:02:33.426  INFO 11491 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-28 21:02:33.767  INFO 11491 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-28 21:02:33.770  INFO 11491 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-28 21:02:33.777  INFO 11491 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-28 21:02:33.823  INFO 11491 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2018-05-28 21:02:33.830  INFO 11491 --- [main] c.v.SpringFilesApplication               : Started SpringFilesApplication in 2.593 seconds (JVM running for 3.184)
+2018-05-28 21:02:37.551  INFO 11491 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-05-28 21:02:37.552  INFO 11491 --- [RMI TCP Connection(2)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@8c3b9d: startup date [Mon May 28 21:02:31 EEST 2018]; root of context hierarchy
+2018-05-28 21:02:37.554  INFO 11491 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-28 21:02:37.554  INFO 11491 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
